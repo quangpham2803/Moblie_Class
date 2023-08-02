@@ -54,7 +54,7 @@ class ClockTextMarker extends StatelessWidget {
         height: height,
         child: Text(
           value.toString(),
-          style: TextStyle(fontSize: 24),
+          style: const TextStyle(fontSize: 24),
           textAlign: TextAlign.center,
         ),
       ),

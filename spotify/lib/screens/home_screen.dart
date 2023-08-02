@@ -155,7 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           image: DecorationImage(
                               fit: BoxFit.cover,
                               image: AssetImage(
-                                  'assets/images/thumbnail ${index + 4}.jpg'))),
+                                  'assets/images/quang.png'))),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 5),

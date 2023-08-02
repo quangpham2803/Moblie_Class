@@ -29,8 +29,8 @@ class _SongPlayingState extends State<SongPlaying> {
               Navigator.of(context).pop();
             },
           ),
-          title: Column(
-            children: const [
+          title: const Column(
+            children: [
               Text(
                 'PLAYING FROM YOUR LIBRARY',
                 style: TextStyle(

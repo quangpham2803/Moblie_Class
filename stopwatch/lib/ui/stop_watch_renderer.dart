@@ -9,27 +9,28 @@ import 'package:stopwatch/ui/custom_button.dart';
 import 'elapsed_time_text.dart';
 
 class StopWatchRenderer extends StatelessWidget {
-  StopWatchRenderer(
-      {Key? key,
-      required this.elasped,
-      required this.radius,
-      required this.resetCallback,
-      required this.startCallback,
-      required this.startState,
-      required this.onpause})
-      : super(key: key);
+  const StopWatchRenderer({
+    Key? key,
+    required this.elasped,
+    required this.radius,
+    required this.resetCallback,
+    required this.startCallback,
+    required this.startState,
+    required this.onpause,
+  }) : super(key: key);
+
   final Duration elasped;
   final double radius;
-  VoidCallback startCallback;
-  VoidCallback resetCallback;
-  bool startState;
-  VoidCallback onpause;
+  final VoidCallback startCallback;
+  final VoidCallback resetCallback;
+  final bool startState;
+  final VoidCallback onpause;
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Positioned(left: radius, top: radius, child: CenterNob()),
+        Positioned(left: radius, top: radius, child: const CenterNob()),
         for (var i = 5; i <= 60; i += 5)
           Positioned(
             top: radius,

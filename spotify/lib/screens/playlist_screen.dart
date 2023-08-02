@@ -137,8 +137,8 @@ class _PlayListScreenState extends State<PlayListScreen> {
                                             borderRadius:
                                                 BorderRadius.circular(5),
                                           ),
-                                          child: Row(
-                                            children: const [
+                                          child: const Row(
+                                            children: [
                                               Icon(
                                                 CupertinoIcons.search,
                                                 color: Colors.white,
@@ -209,8 +209,8 @@ class _PlayListScreenState extends State<PlayListScreen> {
                               letterSpacing: 0.3),
                         ),
                         const SizedBox(height: 10),
-                        Row(
-                          children: const [
+                        const Row(
+                          children: [
                             CircleAvatar(
                               radius: 10,
                               backgroundColor: Colors.grey,
@@ -227,8 +227,8 @@ class _PlayListScreenState extends State<PlayListScreen> {
                           ],
                         ),
                         const SizedBox(height: 10),
-                        Row(
-                          children: const [
+                        const Row(
+                          children: [
                             Icon(
                               Icons.timer_outlined,
                               color: Colors.grey,

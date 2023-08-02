@@ -100,7 +100,6 @@ class _UserAccountState extends State<UserAccount> {
                             padding: EdgeInsets.zero,
                             splashRadius: 20,
                             onPressed: () {
-                              print('search');
                             },
                             icon: const Icon(
                               CupertinoIcons.search,
@@ -112,7 +111,6 @@ class _UserAccountState extends State<UserAccount> {
                             padding: EdgeInsets.zero,
                             splashRadius: 20,
                             onPressed: () {
-                              print('add');
                             },
                             icon: const Icon(
                               Icons.add,

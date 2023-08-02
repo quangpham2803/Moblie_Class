@@ -17,7 +17,7 @@ class CenterNob extends StatelessWidget {
         width: 20,
         height: 20,
         decoration:
-            BoxDecoration(color: Colors.white70, shape: BoxShape.circle),
+            const BoxDecoration(color: Colors.white70, shape: BoxShape.circle),
       ),
     );
   }
