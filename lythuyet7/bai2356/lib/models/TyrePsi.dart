@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 class TyrePsi {
   final double psi;
   final int temp;

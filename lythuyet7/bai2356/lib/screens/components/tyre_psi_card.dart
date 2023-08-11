@@ -18,43 +18,44 @@ class TyrePsiCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(defaultPadding),
       decoration: BoxDecoration(
-        color:
-            tyrePsi.isLowPressure ? redColor.withOpacity(0.1) : Colors.white10,
+        color: tyrePsi.isLowPressure ? redColor.withOpacity(0.1) : Colors.white10,
         border: Border.all(
-            color: tyrePsi.isLowPressure ? redColor : primaryColor, width: 2),
+          color: tyrePsi.isLowPressure ? redColor : primaryColor,
+          width: 2,
+        ),
         borderRadius: const BorderRadius.all(Radius.circular(6)),
       ),
-      child: isBottomTwoTyre
-          ? Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                lowPressureText(context),
-                const Spacer(),
-                psiText(context, psi: tyrePsi.psi.toString()),
-                const SizedBox(height: defaultPadding),
-                Text(
-                  "${tyrePsi.temp}\u2103",
-                  style: const TextStyle(fontSize: 16),
-                ),
-              ],
-            )
-          : Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                psiText(context, psi: tyrePsi.psi.toString()),
-                const SizedBox(height: defaultPadding),
-                Text(
-                  "${tyrePsi.temp}\u2103",
-                  style: const TextStyle(fontSize: 16),
-                ),
-                const Spacer(),
-                lowPressureText(context),
-              ],
+      child: SingleChildScrollView( // Wrap the Column with SingleChildScrollView
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: isBottomTwoTyre
+              ? [
+            lowPressureText(context),
+            const SizedBox(height: defaultPadding),
+            psiText(context, psi: tyrePsi.psi.toString()),
+            const SizedBox(height: defaultPadding),
+            Text(
+              "${tyrePsi.temp}\u2103",
+              style: const TextStyle(fontSize: 16),
             ),
+          ]
+              : [
+            psiText(context, psi: tyrePsi.psi.toString()),
+            const SizedBox(height: defaultPadding),
+            Text(
+              "${tyrePsi.temp}\u2103",
+              style: const TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: defaultPadding),
+            lowPressureText(context),
+          ],
+        ),
+      ),
     );
   }
 
-  Column lowPressureText(BuildContext context) {
+
+  Widget lowPressureText(BuildContext context) {
     return Column(
       children: [
         Text(
@@ -77,9 +78,9 @@ class TyrePsiCard extends StatelessWidget {
       TextSpan(
         text: psi,
         style: Theme.of(context).textTheme.headlineMedium!.copyWith(
-              fontWeight: FontWeight.w600,
-              color: Colors.white,
-            ),
+          fontWeight: FontWeight.w600,
+          color: Colors.white,
+        ),
         children: const [
           TextSpan(
             text: "psi",

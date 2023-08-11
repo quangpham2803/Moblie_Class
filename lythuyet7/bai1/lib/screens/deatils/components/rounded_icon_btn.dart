@@ -18,7 +18,7 @@ class RoundIconBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       padding: EdgeInsets.zero,
-      shape: CircleBorder(),
+      shape: const CircleBorder(),
       elevation: 0,
       color: Colors.white,
       height: 36,

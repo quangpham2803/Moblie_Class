@@ -35,9 +35,10 @@ void updateView(){
   body: Stack(
   children: [
   //Login
-  AnimatedPositioned(width: _size.width *0.88,
+  AnimatedPositioned(
+    width: _size.width *0.88,
   height: _size.height,
-  left: _isShowSignUp? _size.width * 0.76: _size.width*0.88,
+  left: _isShowSignUp? -_size.width * 0.76: _size.width*0,
   duration:defaultDuration,
   child:GestureDetector(
   onTap: (){
@@ -68,7 +69,7 @@ void updateView(){
   Positioned(
   top: _size.height * 0.1,
   left: 0,
-  right: _isShowSignUp?_size.width*0.06:_size.width *0.06,
+  right: _isShowSignUp? -_size.width*0.06:_size.width *0.06,
   child: CircleAvatar(
   radius: 25,
   backgroundColor: Colors.white60,
