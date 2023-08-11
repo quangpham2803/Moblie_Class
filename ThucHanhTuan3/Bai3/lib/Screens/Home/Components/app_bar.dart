@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_web/Components/default_button.dart';
 
 import 'menu_item.dart';
 
@@ -32,7 +31,7 @@ class CustomAppBar extends StatelessWidget {
           SizedBox(width: 5),
           Text(
             "Foodi".toUpperCase(),
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
           ),
           Spacer(),
           MenuItem(
@@ -44,24 +43,10 @@ class CustomAppBar extends StatelessWidget {
             press: () {},
           ),
           MenuItem(
-            title: "Pricing",
+            title: "Pre",
             press: () {},
           ),
-          MenuItem(
-            title: "Contact",
-            press: () {},
-          ),
-          MenuItem(
-            title: "Login",
-            press: () {},
-          ),
-          DefaultButton(
-            text: "Get Started",
-            press: () {
-              // Điều gì đó được thực hiện khi nút "Get Started" được nhấn
-            },
-            key: UniqueKey(),
-          ),
+
         ],
       ),
     );

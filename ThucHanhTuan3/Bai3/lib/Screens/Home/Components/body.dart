@@ -11,7 +11,7 @@ class Body extends StatelessWidget {
         children: <Widget>[
           Text(
             "Burger".toUpperCase(),
-            style: Theme.of(context).textTheme.headline1?.copyWith( // Thêm toán tử '?.' ở đây
+            style: Theme.of(context).textTheme.displayLarge?.copyWith( // Thêm toán tử '?.' ở đây
               color: kTextcolor,
               fontWeight: FontWeight.bold,
             ),
